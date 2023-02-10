@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +19,20 @@ public class ProductController {
     @GetMapping
     public List<Product> getAll(){
         return productServiceImp.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public Product showEdit(@PathVariable int id){
+        return productServiceImp.findById(id);
+    }
+
+    @PostMapping()
+    public void save(@RequestBody Product product){
+        productServiceImp.save(product);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable int id){
+        productServiceImp.remove(id);
     }
 }

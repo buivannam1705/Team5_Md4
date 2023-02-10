@@ -10,19 +10,13 @@ import javax.persistence.*;
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    @NotNull
+    private int id;
     private String username;
-    @NotNull
     private String password;
-    @NotNull
     private String address;
     private String avatar;
-    @NotNull
     private String phoneNumber;
-    @Column(columnDefinition ="integer default 2")
     private int role;
-    @Column(columnDefinition = "integer default 2")
     private int status;
 
 }

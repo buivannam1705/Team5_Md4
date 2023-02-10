@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
     private String content;
     private int vote;
     @ManyToOne(fetch = FetchType.EAGER)

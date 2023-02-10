@@ -9,11 +9,10 @@ import javax.persistence.*;
 public class BillDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
     @ManyToOne(fetch = FetchType.EAGER)
     private ProductDetail productDetail;
     @ManyToOne(fetch = FetchType.EAGER)
     private Bill bill;
-
 
 }
