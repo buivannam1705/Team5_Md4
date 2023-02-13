@@ -4,6 +4,7 @@ import com.sun.istack.NotNull;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -16,7 +17,8 @@ public class Account {
     private String address;
     private String avatar;
     private String phoneNumber;
-    private int role;
+    @ManyToMany
+    private List<Role> role;
     private int status;
 
 }
