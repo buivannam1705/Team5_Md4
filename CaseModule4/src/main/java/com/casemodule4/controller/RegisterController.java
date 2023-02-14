@@ -34,10 +34,7 @@ public class RegisterController {
         }
         return null;
     }
-    @GetMapping
-    public List<Account> getAll(){
-       return accountService.GetAll();
-    }
+
 
 
 
