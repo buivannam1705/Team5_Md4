@@ -56,6 +56,10 @@ public class AccountController {
     public Account delete(@PathVariable int id) {
         return accountService.delete(id);
     }
+//    @GetMapping("/{username}")
+//    public List<Account> search(@PathVariable String username) {
+////        return accountService.FindByus(username);
+//    }
 
 
 }
