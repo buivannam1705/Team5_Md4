@@ -1,5 +1,6 @@
 package com.casemodule4.config;
 
+
 import com.casemodule4.config.filter.JwtAuthenticationFilter;
 import com.casemodule4.service.Imp.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 
-@Configuration
+@Configuration 
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired

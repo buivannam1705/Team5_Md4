@@ -1,10 +1,11 @@
 package com.casemodule4.model;
 
-import com.sun.istack.NotNull;
 import lombok.Data;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 @Data
@@ -17,8 +18,9 @@ public class Account {
     private String address;
     private String avatar;
     private String phoneNumber;
-    @ManyToMany
-    private List<Role> role;
+
     private int status;
+
+    private String role;
 
 }
