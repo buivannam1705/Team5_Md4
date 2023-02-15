@@ -12,9 +12,9 @@ public class ProductDetail {
     private Integer id;
     private Integer status;
     private int quantity;
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     private Product product;
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     private Size size;
 
 }

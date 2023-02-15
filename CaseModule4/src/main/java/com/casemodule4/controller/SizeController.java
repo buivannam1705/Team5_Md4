@@ -9,6 +9,7 @@ import java.util.List;
 
 @RequestMapping("/size")
 @RestController
+@CrossOrigin("*")
 public class SizeController {
     @Autowired
     SizeServiceImp sizeServiceImp;

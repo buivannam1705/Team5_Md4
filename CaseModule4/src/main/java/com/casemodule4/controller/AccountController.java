@@ -58,8 +58,8 @@ public class AccountController {
     }
 
     @DeleteMapping("/{id}")
-    public Account delete(@PathVariable int id) {
-        return accountService.delete(id);
+    public void delete(@PathVariable int id) {
+        accountService.delete(id);
     }
 
 
