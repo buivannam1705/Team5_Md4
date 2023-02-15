@@ -9,12 +9,13 @@ import javax.persistence.*;
 public class ProductDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private Integer status;
-    private int quantity;
-    @ManyToOne(fetch = FetchType.EAGER)
+    private int id;
+    @Column(columnDefinition = "int default 1")
+    private int status;
+    private Long quantity;
+    @ManyToOne
     private Product product;
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     private Size size;
 
 }

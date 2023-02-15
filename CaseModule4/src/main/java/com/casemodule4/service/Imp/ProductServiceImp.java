@@ -14,30 +14,32 @@ import java.util.List;
 @Service
 public class ProductServiceImp implements IProductService<Product> {
     @Autowired
-    IProductRepo productRepo;
+    IProductRepo iProductRepo;
 
     @Override
     public List<Product> findAll() {
-        return (List<Product>) productRepo.findAll();
+        return (List<Product>) iProductRepo.findAll();
     }
 
     @Override
     public Page getAll(Pageable pageable) {
-        return productRepo.findAll(pageable);
+        return iProductRepo.findAll(pageable);
     }
 
     @Override
     public Product save(Product product) {
-        return productRepo.save(product);
+        return iProductRepo.save(product);
     }
+
+
 
     @Override
     public void remove(Integer id) {
-        productRepo.deleteById(id);
+        iProductRepo.deleteById(id);
     }
 
     @Override
     public Product findById(Integer id) {
-        return productRepo.findById(id).get();
+        return iProductRepo.findById(id).get();
     }
 }
