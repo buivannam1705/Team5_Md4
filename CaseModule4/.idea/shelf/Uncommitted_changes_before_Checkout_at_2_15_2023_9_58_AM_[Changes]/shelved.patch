@@ -1,0 +1,77 @@
+Index: src/main/java/com/casemodule4/controller/AccountController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.casemodule4.controller;\r\n\r\nimport com.casemodule4.model.Account;\r\nimport com.casemodule4.service.Imp.AccountService;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.http.HttpStatus;\r\nimport org.springframework.http.ResponseEntity;\r\nimport org.springframework.util.FileCopyUtils;\r\nimport org.springframework.web.bind.annotation.*;\r\nimport org.springframework.web.multipart.MultipartFile;\r\n\r\nimport java.io.File;\r\nimport java.io.IOException;\r\nimport java.util.List;\r\n\r\n@CrossOrigin(\"*\")\r\n@RestController\r\n@RequestMapping(\"/account\")\r\npublic class AccountController {\r\n\r\n    @Autowired\r\n    AccountService accountService;\r\n\r\n    @GetMapping\r\n    public List<Account> getAll() {\r\n        return accountService.getAll();\r\n    }\r\n\r\n\r\n    @GetMapping(\"/{username}\")\r\n    public  Account name(@PathVariable String username){\r\n        return accountService.findAccountByUsername(username);\r\n    }\r\n\r\n    @PostMapping\r\n    public ResponseEntity<String> create(@RequestBody Account account) {\r\n        if (accountService.findAccountByUsername(account.getUsername())==null){\r\n             accountService.save(account);\r\n             return new  ResponseEntity<>(HttpStatus.OK);\r\n        }\r\n        return new  ResponseEntity<>(HttpStatus.BAD_REQUEST);\r\n    }\r\n\r\n    @PostMapping(\"/upImg\")\r\n    public String upImg(@RequestParam MultipartFile fileImg) {\r\n        String nameImg = fileImg.getOriginalFilename();\r\n        try {\r\n            FileCopyUtils.copy(fileImg.getBytes(), new File(\"D:\\\\DailyShop Free Website Template - Free-CSS.com\\\\MarkUps-dailyShop\\\\dailyShop\\\\img/\" + nameImg));\r\n            return \"/img/\" + nameImg;\r\n        } catch (IOException e) {\r\n            e.printStackTrace();\r\n        }\r\n        return null;\r\n    }\r\n\r\n    @GetMapping(\"/{id}\")\r\n    public Account showEdit(@PathVariable int id) {\r\n        return accountService.findById(id);\r\n    }\r\n\r\n    @PutMapping(\"/{id}\")\r\n    public Account edit(@RequestBody Account account) {\r\n        return accountService.save(account);\r\n    }\r\n\r\n    @DeleteMapping(\"/{id}\")\r\n    public Account delete(@PathVariable int id) {\r\n        return accountService.delete(id);\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/casemodule4/controller/AccountController.java b/src/main/java/com/casemodule4/controller/AccountController.java
+--- a/src/main/java/com/casemodule4/controller/AccountController.java	(revision d649eb2618fbda15f84528efcd229cca08fc4345)
++++ b/src/main/java/com/casemodule4/controller/AccountController.java	(date 1676429662181)
+@@ -45,7 +45,7 @@
+     public String upImg(@RequestParam MultipartFile fileImg) {
+         String nameImg = fileImg.getOriginalFilename();
+         try {
+-            FileCopyUtils.copy(fileImg.getBytes(), new File("D:\\DailyShop Free Website Template - Free-CSS.com\\MarkUps-dailyShop\\dailyShop\\img/" + nameImg));
++            FileCopyUtils.copy(fileImg.getBytes(), new File("D:\\Modul4\\Case4\\FE2\\Team5_FrontEnd\\MarkUps-dailyShop\\dailyShop\\img/" + nameImg));
+             return "/img/" + nameImg;
+         } catch (IOException e) {
+             e.printStackTrace();
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\nspring.datasource.url=jdbc:mysql://localhost:3306/team5ok\r\nspring.datasource.username=root\r\nspring.datasource.password=Phuong20071995\r\nspring.datasource.driverClassName=com.mysql.cj.jdbc.Driver\r\n\r\nspring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect\r\nspring.jpa.properties.hibernate.id.new_generator_mappings = false\r\nspring.jpa.properties.hibernate.show.sql = true\r\nspring.jpa.properties.hibernate.format_sql = true\r\nspring.jpa.generate-ddl=true\r\nspring.jpa.properties.hibernate.hb2dll.auto = update\r\nlogging.level.org.hibernate.SQL=DEBUG\r\nlogging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	(revision d649eb2618fbda15f84528efcd229cca08fc4345)
++++ b/src/main/resources/application.properties	(date 1676429299231)
+@@ -1,7 +1,7 @@
+ 
+-spring.datasource.url=jdbc:mysql://localhost:3306/team5ok
++spring.datasource.url=jdbc:mysql://localhost:3306/teamtok
+ spring.datasource.username=root
+-spring.datasource.password=Phuong20071995
++spring.datasource.password=123456
+ spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
+ 
+ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+Index: build/resources/main/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\nspring.datasource.url=jdbc:mysql://localhost:3306/team5ok\r\nspring.datasource.username=root\r\nspring.datasource.password=Phuong20071995\r\nspring.datasource.driverClassName=com.mysql.cj.jdbc.Driver\r\n\r\nspring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect\r\nspring.jpa.properties.hibernate.id.new_generator_mappings = false\r\nspring.jpa.properties.hibernate.show.sql = true\r\nspring.jpa.properties.hibernate.format_sql = true\r\nspring.jpa.generate-ddl=true\r\nspring.jpa.properties.hibernate.hb2dll.auto = update\r\nlogging.level.org.hibernate.SQL=DEBUG\r\nlogging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/build/resources/main/application.properties b/build/resources/main/application.properties
+--- a/build/resources/main/application.properties	(revision d649eb2618fbda15f84528efcd229cca08fc4345)
++++ b/build/resources/main/application.properties	(date 1676429326008)
+@@ -1,7 +1,7 @@
+ 
+-spring.datasource.url=jdbc:mysql://localhost:3306/team5ok
++spring.datasource.url=jdbc:mysql://localhost:3306/teamtok
+ spring.datasource.username=root
+-spring.datasource.password=Phuong20071995
++spring.datasource.password=123456
+ spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
+ 
+ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"FrameworkDetectionExcludesConfiguration\">\r\n    <file type=\"web\" url=\"file://$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_8\" project-jdk-name=\"openjdk-18\" project-jdk-type=\"JavaSDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision d649eb2618fbda15f84528efcd229cca08fc4345)
++++ b/.idea/misc.xml	(date 1676426878465)
+@@ -4,5 +4,5 @@
+   <component name="FrameworkDetectionExcludesConfiguration">
+     <file type="web" url="file://$PROJECT_DIR$" />
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="openjdk-18" project-jdk-type="JavaSDK" />
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file
