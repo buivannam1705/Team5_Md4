@@ -3,6 +3,8 @@ package com.casemodule4.controller;
 import com.casemodule4.model.Account;
 import com.casemodule4.service.Imp.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -31,8 +33,12 @@ public class AccountController {
     }
 
     @PostMapping
-    public Account create(@RequestBody Account account) {
-        return accountService.save(account);
+    public ResponseEntity<String> create(@RequestBody Account account) {
+        if (accountService.findAccountByUsername(account.getUsername())==null){
+             accountService.save(account);
+             return new  ResponseEntity<>(HttpStatus.OK);
+        }
+        return new  ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
     @PostMapping("/upImg")
