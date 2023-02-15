@@ -7,9 +7,9 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class AccountToken {
+    private int id;
     private String username;
     private String avatar;
     private String token;
-
     private String role;
 }

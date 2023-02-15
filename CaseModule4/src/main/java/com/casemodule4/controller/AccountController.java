@@ -24,6 +24,12 @@ public class AccountController {
         return accountService.getAll();
     }
 
+
+    @GetMapping("/{username}")
+    public  Account name(@PathVariable String username){
+        return accountService.findAccountByUsername(username);
+    }
+
     @PostMapping
     public Account create(@RequestBody Account account) {
         return accountService.save(account);

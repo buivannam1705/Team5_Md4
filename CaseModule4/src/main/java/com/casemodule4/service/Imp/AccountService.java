@@ -21,6 +21,10 @@ public class AccountService implements UserDetailsService {
     @Autowired
     IAccountRepo iAccountRepo;
 
+    public  Account checkUser(String username){
+        return iAccountRepo.checkUser(username);
+    }
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Account account = iAccountRepo.findAccountByUsername(username);
