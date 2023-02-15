@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9be936e-11a8-447c-925f-0d5009959136" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/service/Imp/AccountService$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/casemodule4/repository/IAccountRepo2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/model/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/model/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/model/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/model/dto/AccountToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/model/dto/AccountToken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/service/Imp/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/casemodule4/service/Imp/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SecurityConfig.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/casemodule4/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/casemodule4/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/casemodule4/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/casemodule4/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/casemodule4/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/casemodule4/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/casemodule4/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/casemodule4/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/casemodule4/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/casemodule4/model/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/casemodule4/model/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/casemodule4/model/dto/AccountToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/casemodule4/model/dto/AccountToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/casemodule4/repository/IAccountRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/casemodule4/repository/IAccountRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/casemodule4/service/Imp/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/casemodule4/service/Imp/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="a9be936e-11a8-447c-925f-0d5009959136" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,7 +98,7 @@
       <workItem from="1676337289596" duration="7503000" />
       <workItem from="1676358175427" duration="8217000" />
       <workItem from="1676379721177" duration="6786000" />
-      <workItem from="1676423396935" duration="2413000" />
+      <workItem from="1676423396935" duration="2755000" />
     </task>
     <servers />
   </component>
