@@ -45,7 +45,7 @@ public class AccountController {
     public String upImg(@RequestParam MultipartFile fileImg) {
         String nameImg = fileImg.getOriginalFilename();
         try {
-            FileCopyUtils.copy(fileImg.getBytes(), new File("D:\\DailyShop Free Website Template - Free-CSS.com\\MarkUps-dailyShop\\dailyShop\\img/" + nameImg));
+            FileCopyUtils.copy(fileImg.getBytes(), new File("D:\\Modul4\\Case4\\FE2\\Team5_FrontEnd\\MarkUps-dailyShop\\dailyShop\\img/" + nameImg));
             return "/img/" + nameImg;
         } catch (IOException e) {
             e.printStackTrace();
