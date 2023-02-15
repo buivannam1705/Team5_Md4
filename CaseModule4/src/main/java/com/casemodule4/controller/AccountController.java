@@ -69,4 +69,17 @@ public class AccountController {
     }
 
 
+
+//    Radio_button
+    @PutMapping("/Block/{id}/{status}")
+    public void Block( @PathVariable int id,@PathVariable int status) {
+        if (accountService.findById(id)==null){
+
+        }else {
+            accountService.findById(id).getStatus();
+
+        }
+    }
+
+
 }

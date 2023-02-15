@@ -65,5 +65,8 @@ public class AccountService implements UserDetailsService {
         return iAccountRepo.findById(id).get();
     }
 
+//    public Account setStatus(int id,int Status){
+//       return save(findById(id).setStatus(Status));
+//    }
 
 }
