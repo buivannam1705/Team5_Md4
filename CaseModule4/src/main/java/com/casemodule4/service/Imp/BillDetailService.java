@@ -23,4 +23,8 @@ public class BillDetailService {
         billDetailRepo.deleteById(id);
     }
 
+    public void sum(int id){
+        billDetailRepo.sumPrice(id);
+    }
+
 }

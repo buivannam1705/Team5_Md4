@@ -1,5 +1,7 @@
+//<<<<<<< HEAD
 package com.casemodule4.model;
 
+import com.casemodule4.model.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -27,3 +29,26 @@ public class ProductDetail {
         this.size = size;
     }
 }
+//=======
+//package com.casemodule4.model;
+//
+//import lombok.Data;
+//
+//import javax.persistence.*;
+//
+//@Entity
+//@Data
+//public class ProductDetail {
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private int id;
+//    @Column(columnDefinition = "int default 1")
+//    private int status;
+//    private Long quantity;
+//    @ManyToOne
+//    private Product product;
+//    @ManyToOne
+//    private Size size;
+//
+//}
+//>>>>>>> 9d1ea54a26c96830a3a28a3f3e35b4bb42c547b2

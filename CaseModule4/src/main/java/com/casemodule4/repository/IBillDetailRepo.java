@@ -10,4 +10,7 @@ public interface IBillDetailRepo extends PagingAndSortingRepository<BillDetail,I
     @Query("SELECT b from BillDetail b where b.bill.id=:bill_id")
     List<BillDetail> findBillDetailByBill_Id(int bill_id);
 
+    @Query("select sum(b.productDetail.product.price) from BillDetail  b where b.bill.id=:bill_id")
+    Double sumPrice(int bill_id);
+
 }
