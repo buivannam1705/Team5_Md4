@@ -43,4 +43,9 @@ public class BillController {
         bill.setStatus(2);
         billService.save(bill);
     }
+
+    @PostMapping("/deleteBillStatus")
+    public void deleteAfterAll(){
+        billService.deleteByStatus(1);
+    }
 }

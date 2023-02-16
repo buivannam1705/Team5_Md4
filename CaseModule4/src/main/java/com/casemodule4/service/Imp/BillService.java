@@ -34,4 +34,8 @@ public class BillService {
     public void remove(int id){
         billRepo.deleteById(id);
     }
+
+    public void deleteByStatus(int status){
+        billRepo.deleteByStatus(1);
+    }
 }

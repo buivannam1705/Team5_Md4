@@ -15,4 +15,7 @@ public interface IBillRepo extends PagingAndSortingRepository<Bill,Integer> {
 
     @Query("select b from Bill b where b.account.username=:username and b.Status=:status")
     List<Bill> findBillsByAccount_UsernameAndStatus(String username,int status);
+
+    @Query("delete from Bill c where c.Status=:status")
+    void deleteByStatus(int status);
 }
