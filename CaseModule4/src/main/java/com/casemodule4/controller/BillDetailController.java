@@ -39,4 +39,10 @@ public class BillDetailController {
         return billDetailService.listBillByBill_id(id);
     }
 
+
+    @GetMapping("/price/{id}")
+    public void sum(@PathVariable int id){
+        billDetailService.sum(id);
+    }
+
 }
