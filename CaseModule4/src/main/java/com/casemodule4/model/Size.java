@@ -1,6 +1,5 @@
 package com.casemodule4.model;
 
-import com.sun.istack.NotNull;
 import lombok.Data;
 
 import javax.persistence.Entity;
