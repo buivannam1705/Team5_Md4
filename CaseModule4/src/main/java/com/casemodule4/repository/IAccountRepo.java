@@ -19,6 +19,4 @@ public interface IAccountRepo extends PagingAndSortingRepository<Account, Intege
     @Query(nativeQuery = true, value = "SELECT * from Account where username like concat('%',:username,'%');")
     List<Account>  findAccountByUsername1(@Param("username") String username);
 
-
-
 }
