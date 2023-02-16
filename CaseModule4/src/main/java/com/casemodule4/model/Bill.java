@@ -15,5 +15,6 @@ public class Bill {
     private Date date;
     @ManyToOne(fetch = FetchType.EAGER)
     private Account account;
+    private int Status;
 
 }
