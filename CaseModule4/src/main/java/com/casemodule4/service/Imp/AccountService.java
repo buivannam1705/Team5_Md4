@@ -11,12 +11,13 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Component
 public class AccountService implements UserDetailsService {
     @Autowired
     IAccountRepo iAccountRepo;
@@ -65,8 +66,26 @@ public class AccountService implements UserDetailsService {
         return iAccountRepo.findById(id).get();
     }
 
-//    public Account setStatus(int id,int Status){
-//       return save(findById(id).setStatus(Status));
-//    }
+    public Account setStatus(int id){
+        int status = 2;
+        int status1 = 1;
+
+        Account account= findById(id);
+        if(account.getStatus()==2){
+            account.setStatus(status1);
+            iAccountRepo.save(account);
+            return account;
+        }else {
+            account.setStatus(status);
+            iAccountRepo.save(account);
+            return account;
+        }
+
+
+    }
+
+    public List<Account> findbyusername(String username){
+       return iAccountRepo.findAccountByUsername1(username);
+    }
 
 }

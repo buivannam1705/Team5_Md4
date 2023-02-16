@@ -8,6 +8,8 @@ import lombok.Data;
 @AllArgsConstructor
 public class AccountToken {
     private int id;
+
+    private  int status;
     private String username;
     private String avatar;
     private String token;

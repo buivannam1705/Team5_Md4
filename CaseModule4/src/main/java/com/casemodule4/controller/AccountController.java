@@ -28,17 +28,17 @@ public class AccountController {
 
 
     @GetMapping("/{username}")
-    public  Account name(@PathVariable String username){
+    public Account name(@PathVariable String username) {
         return accountService.findAccountByUsername(username);
     }
 
     @PostMapping
     public ResponseEntity<String> create(@RequestBody Account account) {
-        if (accountService.findAccountByUsername(account.getUsername())==null){
-             accountService.save(account);
-             return new  ResponseEntity<>(HttpStatus.OK);
+        if (accountService.findAccountByUsername(account.getUsername()) == null) {
+            accountService.save(account);
+            return new ResponseEntity<>(HttpStatus.OK);
         }
-        return new  ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
     @PostMapping("/upImg")
@@ -64,22 +64,25 @@ public class AccountController {
     }
 
     @DeleteMapping("/{id}")
-    public Account delete(@PathVariable int id) {
-        return accountService.delete(id);
+    public void delete(@PathVariable int id) {
+
+        accountService.delete(id);
+    }
+
+
+    @PostMapping("/block/{id}")
+    public void Block(@PathVariable int id) {
+        accountService.setStatus(id);
+    }
+
+    @GetMapping("/search/{username}")
+    public List<Account> search(@PathVariable String username) {
+       return accountService.findbyusername(username);
+
     }
 
 
 
-//    Radio_button
-    @PutMapping("/Block/{id}/{status}")
-    public void Block( @PathVariable int id,@PathVariable int status) {
-        if (accountService.findById(id)==null){
-
-        }else {
-            accountService.findById(id).getStatus();
-
-        }
-    }
 
 
 }
