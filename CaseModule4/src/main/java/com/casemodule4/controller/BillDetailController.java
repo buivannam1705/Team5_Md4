@@ -5,6 +5,8 @@ import com.casemodule4.service.Imp.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("billDetail")
 @CrossOrigin("*")
@@ -32,6 +34,9 @@ public class BillDetailController {
         return billDetailService.save(billDetail);
     }
 
-    @GetMapping("")
+    @GetMapping("/showByBill/{id}")
+    public List<BillDetail> listByBill(@PathVariable int id){
+        return billDetailService.listBillByBill_id(id);
+    }
 
 }
